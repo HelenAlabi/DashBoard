@@ -1,0 +1,27 @@
+
+.topbar{
+    width: 100%;
+    height: 10%;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+#img{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: rgb(235, 98, 98);
+    
+}
+
+img{
+    height: 50px;
+    width: 50px;
+   
+}
+
+#wel{
+    margin-left: 3%;
+}
