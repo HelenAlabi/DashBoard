@@ -2,26 +2,38 @@
 .topbar{
     width: 100%;
     height: 10%;
-    background-color: azure;
+    background-color:whitesmoke;
     display: flex;
     justify-content: space-between;
     padding-top: 2%;
 }
 
-#img{
+/* #img{
     height: 50px;
     width: 50px;
     border-radius: 25px;
     background-color: rgb(235, 98, 98);
     
-}
+} */
 
 img{
     height: 50px;
     width: 50px;
+   margin-top: -16%;
    
 }
 
 #wel{
     margin-left: 3%;
+}
+
+.search{
+    width: 350px;
+    height: 20px;
+    background-color: white;
+    color: rgb(197, 196, 196);
+    border-radius: 20px;
+   text-align: center;
+   font-weight: lighter;
+   font-size: 15px;
 }

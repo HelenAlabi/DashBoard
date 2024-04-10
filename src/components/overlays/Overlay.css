@@ -1,0 +1,59 @@
+.allUsers{
+    height: 100%;
+}
+#add{
+    margin-right: 3%;
+    height: 40px;
+    width: 100px;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.user_Add{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.users_emo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+#usersW{
+    margin-left: 3%;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(153, 153, 153);
+}
+
+#mu{
+    margin-left: 3%;
+    font-family: sans-serif;
+    color: rgb(153, 153, 153);
+}
+
+
+#bell{
+    width: 20px;
+    height: 20px;
+}
+
+#moon{
+    width: 20px;
+    height: 20px;
+}
+
+.emojis{
+    margin-right: 3%;
+}
+
+.upper_use{
+    height: 15vh;
+    
+}

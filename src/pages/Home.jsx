@@ -1,12 +1,12 @@
-
-
+import React from "react"
 
 
 const Home =()=>{
+
     return(
-        <>
-          <div>Home Page</div>
-        </>
+        <React.Fragment>
+
+        </React.Fragment>
     )
 }
 

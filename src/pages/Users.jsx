@@ -1,12 +1,16 @@
-
+import Overlay from "../components/overlays/Overlay"
 
 
 
 
 const Users =()=>{
+ 
+
+
     return(
         <>
-          <div>Users Page</div>
+         <Overlay/> 
+
         </>
     )
 }
