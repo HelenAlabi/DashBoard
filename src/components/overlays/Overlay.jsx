@@ -2,6 +2,8 @@
 import { useState } from "react"
 import Input from "../inputs/Inputs";
 import Lists from "../lists/List";
+import Bell from "../../assets/bell.png"
+import Moon from "../../assets/moon.png"
 import "./Overlay.css"
 const Overlay =()=>{
 
@@ -23,8 +25,8 @@ const Overlay =()=>{
                <div className= "users_emo">
                   <h2 id="usersW">Users</h2>
                  <div className= "emojis">
-                 <img src="../../src/assets/bell.png" alt="" id="bell"/>
-                 <img src="../../src/assets/moon.png" alt="" id="moon" />
+                 <img src={Bell} alt="" id="bell"/>
+                 <img src={Moon} alt="" id="moon" />
                </div>
               </div>
               <div className= "user_Add">
