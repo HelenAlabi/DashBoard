@@ -24,6 +24,7 @@ const Input = ({inputSubmit, onClose, isOpen})=>{
         event.preventDefault();
         console.log(input);
         inputSubmit(input);
+        localStorage.setItem("users", JSON.stringify(input))
     };
     
      
