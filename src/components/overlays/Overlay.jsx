@@ -29,10 +29,11 @@ const submitHandler = (event)=>{
     event.preventDefault();
     console.log(input);
     
-    updateUsers([...listed,input])
+    updateUsers((prevData)=>[...prevData,input]);
+
 };
 
-  
+
   const[isOpen, setIsOpen]=useState(false);
 
 

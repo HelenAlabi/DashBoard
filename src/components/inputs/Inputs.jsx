@@ -4,32 +4,11 @@ import "./Inputs.css"
 
 
 
-<<<<<<< HEAD
+
 const Input = ({ onClose, isOpen, name,email ,image ,inputer,submitter})=>{
-=======
-    const [input, setInput]=useState({
 
-        oruko:"",
-        email:"",
-        pix:""
-    });
-
-    const inputHandler =(event)=>{
-        const{name, value, files}= event.target;
-        setInput((preInputs)=>({
-            ...preInputs,
-            [name]:name==="pix"? URL.createObjectURL(files[0]):value,
-        }));
-    }; 
-
-    const submitHandler = (event)=>{
-        event.preventDefault();
-        console.log(input);
-        inputSubmit(input);
-        localStorage.setItem("users", JSON.stringify(input))
-    };
->>>>>>> 8650cc9156bb87b71807ccf04a5ccc3bab3cddb7
     
+
 
     return(
         <React.Fragment>
