@@ -1,16 +1,41 @@
 
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Input from "../inputs/Inputs";
-import Lists from "../lists/List";
+import Bell from "../../assets/bell.png"
+import Moon from "../../assets/moon.png"
 import "./Overlay.css"
+import { formContext } from "../../UseContext";
 const Overlay =()=>{
 
-  const [listed, setListed] =useState([]);
+  
+  const {listed, updateUsers}= useContext(formContext);
+
+  const [input, setInput]=useState({
+
+    oruko:"",
+    email:"",
+    pix:""
+});
+
+const inputHandler =(event)=>{
+    const{name, value, files}= event.target;
+    setInput((preInputs)=>({
+        ...preInputs,
+        [name]:name==="pix"? URL.createObjectURL(files[0]):value,
+    }));
+}; 
+
+const submitHandler = (event)=>{
+    event.preventDefault();
+    console.log(input);
+    
+    updateUsers((prevData)=>[...prevData,input]);
+
+};
+
+
   const[isOpen, setIsOpen]=useState(false);
 
-  const inputListed =(inputListed)=>{
-    setListed((prevData)=>[...prevData,inputListed])
-  };
 
   const toggleHandler = ()=>{
     setIsOpen(!isOpen);
@@ -23,21 +48,39 @@ const Overlay =()=>{
                <div className= "users_emo">
                   <h2 id="usersW">Users</h2>
                  <div className= "emojis">
-                 <img src="../../src/assets/bell.png" alt="" id="bell"/>
-                 <img src="../../src/assets/moon.png" alt="" id="moon" />
+                 <img src={Bell} alt="" id="bell"/>
+                 <img src={Moon} alt="" id="moon" />
                </div>
               </div>
               <div className= "user_Add">
+              
                  <p id="mu">manage users</p>
                  <button onClick={toggleHandler} id="add">+Add Users</button>
               </div>
            </div>
-           
-             <Lists inputLists={listed}/>
+            
+            <div className= "lists">
 
-             <Input inputSubmit={inputListed}
+            {listed.map((data, index)=>{
+              return(
+                <div className= 'container' key={index}>
+                   <img src={data.pix} alt="" id='pix' />
+                    <h2 id='oruko'>{data.oruko}</h2>
+                    <h3 id='email'>{data.email}</h3>
+                </div>)
+            })}
+
+          
+          </div>
+
+             <Input 
                     onClose={toggleHandler}
-                    isOpen={isOpen}/>
+                    isOpen={isOpen}
+                    name ={input.oruko}
+                    email ={input.email}
+                    image ={input.pix}
+                    inputer ={inputHandler}
+                    submitter ={submitHandler}/>
 
            </div>
         </>
